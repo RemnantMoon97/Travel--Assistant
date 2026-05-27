@@ -1,4 +1,4 @@
-# 多智能体旅行助手agent
+# 多智能体旅行助手
 
 一个基于 LangGraph、`qwen3-max` 和高德 MCP 的多agent旅行助手项目。
 
