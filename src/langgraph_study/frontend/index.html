@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LangGraph Travel Assistant</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <aside class="sidebar-shell">
+      <section class="panel session-panel">
+        <header class="panel-head compact">
+          <p class="eyebrow">Threads</p>
+          <h1>会话</h1>
+        </header>
+
+        <div class="session-actions">
+          <button id="newThreadBtn" class="button button-secondary full-width" type="button">
+            新建会话
+          </button>
+        </div>
+
+        <div id="sessionList" class="session-list"></div>
+      </section>
+    </aside>
+
+    <section class="main-shell">
+      <section class="panel workspace-panel">
+        <header class="panel-head workspace-head">
+          <div>
+            <p class="eyebrow">Multi-Agent Travel Desk</p>
+            <h1>旅行动线</h1>
+            <div class="header-tags">
+              <span class="tag">Chat</span>
+              <span class="tag">Timeline</span>
+              <span class="tag">SQLite Memory</span>
+            </div>
+          </div>
+          <div class="thread-card">
+            <span class="thread-label">current thread_id</span>
+            <code id="threadId">not-created</code>
+          </div>
+        </header>
+
+        <section class="workspace-grid">
+          <section class="conversation-panel">
+            <header class="section-head">
+              <p class="eyebrow">Conversation</p>
+              <h2>对话</h2>
+            </header>
+            <div id="chatHistory" class="chat-history">
+              <div class="empty-state">请选择左侧会话，或先创建一个新会话。</div>
+            </div>
+
+            <div class="composer-box">
+              <textarea
+                id="messageInput"
+                placeholder="例如：帮我做一个去成都的旅游规划"
+              ></textarea>
+              <div class="composer-actions">
+                <p class="composer-hint">Enter 发送 · Shift + Enter 换行</p>
+                <button id="sendBtn" class="button button-primary" type="button">发送</button>
+              </div>
+            </div>
+          </section>
+
+          <aside class="timeline-panel">
+            <header class="timeline-head">
+              <p class="eyebrow">Execution</p>
+              <h2>时间线</h2>
+            </header>
+
+            <div id="processTimeline" class="timeline-list">
+              <div class="empty-state">
+                发送一条消息后，这里会动态出现本轮 Agent 执行步骤。
+              </div>
+            </div>
+          </aside>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
