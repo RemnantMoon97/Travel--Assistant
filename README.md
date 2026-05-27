@@ -1,8 +1,6 @@
-# LangGraph 智能旅行助手
+# 多智能体旅行助手agent
 
-这是一个基于 LangGraph、`qwen3-max` 和高德 MCP 的多智能体旅行助手项目。
-
-当前项目已经不是最初的“学习主题路由图”，而是一个真正的多智能体 Agent 原型：
+一个基于 LangGraph、`qwen3-max` 和高德 MCP 的多agent旅行助手项目。
 
 - 使用 `MessagesState` 维护多轮对话
 - 使用 `qwen3-max` 作为多个专职 agent 的底座模型
